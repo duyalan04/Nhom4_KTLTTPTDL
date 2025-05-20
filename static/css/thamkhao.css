@@ -1,0 +1,75 @@
+/* Định dạng cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Tiêu đề */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0073e6;
+    color: white;
+}
+
+/* Bảng */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #0073e6;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Liên kết */
+a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+/* Điều hướng */
+nav {
+    text-align: center;
+    margin: 20px;
+}
+
+nav a {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+nav a:hover {
+    background-color: #005bb5;
+}
+
+/* Chân trang */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

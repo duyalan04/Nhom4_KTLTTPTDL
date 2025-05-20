@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tham Khảo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thamkhao.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Tham Khảo</h1>
+    </header>
+    
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thư viện sử dụng</th>
+                    <th>Link</th>
+                    <th>Cách cài đặt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BeautifulSoup</td>
+                    <td><a href="https://pypi.org/project/beautifulsoup4/" target="_blank">Documentation</a></td>
+                    <td><code>pip install beautifulsoup4</code></td>
+                </tr>
+                <tr>
+                    <td>Flask</td>
+                    <td><a href="https://flask.palletsprojects.com/en/stable/" target="_blank">Documentation</a></td>
+                    <td><code>pip install flask</code></td>
+                </tr>
+                <tr>
+                    <td>Requests</td>
+                    <td><a href="https://pypi.org/project/requests/" target="_blank">Documentation</a></td>
+                    <td><code>pip install requests</code></td>
+                </tr>
+                <tr>
+                    <td>SQLite3</td>
+                    <td><a href="https://docs.python.org/3/library/sqlite3.html" target="_blank">Documentation</a></td>
+                    <td><code>pip install sqlite3</code></td>
+                <tr>
+                    <td>Nhạc Của Tui</td>
+                    <td><a href="https://www.nhaccuatui.com/" target="_blank">Website</a></td>
+                    <td><code>Không có</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <nav>
+        <a href="{{ url_for('introduce') }}">← Quay lại</a>
+        <a href="{{ url_for('index') }}">Trang sau →</a>
+    </nav>
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

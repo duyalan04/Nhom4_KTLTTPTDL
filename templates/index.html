@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách bài hát mới</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <h1>🎵 Danh sách bài hát mới</h1>
+    <div class="back-button">
+        <a href="{{ url_for('thamkhao') }}">← Quay về</a>
+    </div>
+
+    <!-- Form tìm kiếm -->
+       <form method="GET" action="{{ url_for('index') }}">
+        <input type="text" name="search" placeholder="Tìm kiếm bài hát hoặc ca sĩ" value="{{ search }}">
+        <input type="submit" value="Tìm kiếm">
+    </form>
+
+    <!-- Container hiển thị hai cột -->
+    <div class="song-container">
+        {% if songs %}
+            {% for song in songs %}
+                <div class="song">
+                    <img src="{{ song[2] }}" alt="Album Art">
+                    <div class="info">
+                        <div class="title">{{ song[0] }}</div>
+                        <div class="singer">{{ song[1] }}</div>
+                    </div>
+                    <a href="{{ song[3] }}" target="_blank" class="listen-button">🎵 Nghe bài hát</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Không có bài hát nào phù hợp.</p>
+        {% endif %}
+    </div>
+
+    <!-- Phân trang -->
+    <div class="pagination">
+        {% if page > 1 %}
+            <a href="?page={{ page-1 }}&search={{ search }}" class="prev">← Trước</a>
+        {% endif %}
+        
+        {% for p in range(1, total_pages + 1) %}
+            <a href="?page={{ p }}&search={{ search }}" class="{{ 'active' if p == page else '' }}">{{ p }}</a>
+        {% endfor %}
+        
+        {% if page < total_pages %}
+            <a href="?page={{ page+1 }}&search={{ search }}" class="next">Sau →</a>
+        {% endif %}
+    </div>
+
+</body>
+</html>
