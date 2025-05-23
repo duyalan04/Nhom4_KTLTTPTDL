@@ -44,7 +44,7 @@ def crawl_page(url, page_num):
         print(f"[ERROR] Page {page_num}: {e}")
         return []
 
-def crawl_data(max_pages=3):
+def crawl_data(max_pages):
     all_songs = []
     for page in range(1, max_pages + 1):
         page_url = f"{base_url}.html" if page == 1 else f"{base_url}.{page}.html"
@@ -53,3 +53,4 @@ def crawl_data(max_pages=3):
             break
         all_songs.extend(songs_data)
     return all_songs
+

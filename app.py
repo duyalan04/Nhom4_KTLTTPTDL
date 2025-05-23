@@ -42,7 +42,7 @@ def get_songs(page=1, per_page=30, search_query=None, db_path="MyMusic.db"):
 def home():
     # Trang chủ sẽ chuyển hướng đến trang introduce
     return redirect(url_for('introduce'))
-
+    
 @app.route("/introduce", methods=["GET"])
 def introduce():
     return render_template("introduce.html")

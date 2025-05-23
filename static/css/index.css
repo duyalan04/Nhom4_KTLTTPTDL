@@ -145,25 +145,33 @@ input[type="submit"]:hover {
 }
 
 .pagination {
-  text-align: center;
-  margin-top: 20px;
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 .pagination a {
-  padding: 10px 15px;
-  text-decoration: none;
-  background: #ddd;
-  border-radius: 5px;
-  margin: 0 5px;
+  display: inline-block; 
+  padding: 10px 15px; 
+  text-decoration: none; 
+  background: #ddd; 
+  border-radius: 5px; 
+  margin: 0 5px; 
   transition: 0.3s;
 }
 
 .pagination a.active {
-  background: #007bff;
-  color: white;
+  background: #007bff; 
+  color: white; 
+}
+.pagination span {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  color: #333;
+  font-size: 16px;
 }
 
 .pagination a:hover {
-  background: #0056b3;
-  color: white;
+  background: #0056b3; 
+  color: white; 
 }
